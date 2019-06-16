@@ -1,0 +1,30 @@
+{
+    "name": "servmon-server",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node ./bin/www",
+        "test": "mocha --reporter mochawesome"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "debug": "~2.6.9",
+        "express": "~4.16.0",
+        "fawn": "^2.1.5",
+        "http-errors": "~1.6.2",
+        "joi": "^14.3.1",
+        "jslint": "^0.12.1",
+        "moment": "^2.24.0",
+        "mongoose": "^5.5.14",
+        "morgan": "~1.9.0",
+        "nodemailer": "^6.2.1",
+        "randomatic": "^3.1.1"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "mocha": "^6.1.4",
+        "mochawesome": "^4.0.1"
+    }
+}

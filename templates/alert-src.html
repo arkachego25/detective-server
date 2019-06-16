@@ -1,0 +1,93 @@
+<mjml>
+    <mj-body width="1200px">
+        <mj-section padding="10px" background-color="#2185D0">
+            <mj-column>
+                <mj-text color="#FFFFFF" font-size="18px"><b>Server Monitoring Facility</b></mj-text>
+            </mj-column>
+            <mj-column>
+                <mj-text color="#FFFFFF" font-size="18px" align="right"><b>Failure Statistics</b></mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section padding="5px 10px 5px 10px" border-left="thin solid #2185D0" border-right="thin solid #2185D0" border-bottom="thin solid #2185D0">
+            <mj-column>
+                <mj-table>
+                    <tr>
+                        <td style="text-align: right;"><b><u>Report ID</u>:</b></td>
+                        <td style="padding-left: 6px;">{reportId}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><b><u>Executed On</u>:</b></td>
+                        <td style="padding-left: 6px;">{reportStamp}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><b><u>Status</u>:</b></td>
+                        <td style="padding-left: 6px;">{reportStatus}</td>
+                    </tr>
+                </mj-table>
+            </mj-column>
+            <mj-column>
+                <mj-table>
+                    <tr>
+                        <td style="text-align: right;"><b><u>Total</u>:</b></td>
+                        <td style="padding-left: 6px;">{reportTotal}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><b><u>Passed</u>:</b></td>
+                        <td style="padding-left: 6px; color: #21BA45;">{reportPassed}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><b><u>Failed</u>:</b></td>
+                        <td style="padding-left: 6px; color: #DB2828;">{reportFailed}</td>
+                    </tr>
+                </mj-table>
+            </mj-column>
+        </mj-section>
+        <mj-section padding="5px 10px 5px 10px" border-left="thin solid #2185D0" border-right="thin solid #2185D0" border-bottom="thin solid #2185D0">
+            <mj-column>
+                <mj-text font-size="16px"><b>RabbitMQ Services</b></mj-text>
+                <mj-table>
+                    <tr style="border: 1px solid black; background-color: #ECEDEE; padding: 15px 0;">
+                        <th style="text-align: center;">#</th>
+                        <th style="text-align: left;">Alias</th>
+                        <th style="text-align: center;">Status</th>
+                        <th style="text-align: center;">Limit</th>
+                        <th style="text-align: center;">Count</th>
+                    </tr>
+                    {resultRabbitMQs}
+                </mj-table>
+            </mj-column>
+        </mj-section>
+        <mj-section padding="5px 10px 5px 10px" border-left="thin solid #2185D0" border-right="thin solid #2185D0" border-bottom="thin solid #2185D0">
+            <mj-column>
+                <mj-text font-size="16px"><b>Database Queries</b></mj-text>
+                <mj-table>
+                    <tr style="border: 1px solid black; background-color: #ECEDEE; padding: 15px 0;">
+                        <th style="text-align: center;">#</th>
+                        <th style="text-align: left;">Alias</th>
+                        <th style="text-align: center;">Limit</th>
+                        <th style="text-align: center;">Count</th>
+                    </tr>
+                    {resultDatabases}
+                </mj-table>
+            </mj-column>
+        </mj-section>
+        <mj-section padding="5px 10px 5px 10px" border-left="thin solid #2185D0" border-right="thin solid #2185D0" border-bottom="thin solid #2185D0">
+            <mj-column>
+                <mj-text font-size="16px"><b>Customer Details</b></mj-text>
+                <mj-table>
+                    <tr style="border: 1px solid black; background-color: #ECEDEE; padding: 15px 0;">
+                        <th>PINProjectID</th>
+                        <th>PWAccountID</th>
+                        <th>PWUserID</th>
+                        <th>Count</th>
+                        <th>Project</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                    {databaseCustomers}
+                </mj-table>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>
